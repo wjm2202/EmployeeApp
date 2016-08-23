@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Aug 22 15:02:54 NZST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0156-b033-6a1d-000005c7f560 
+on database directory C:\Users\Liandri\workspace - Copy\EmployeeApp\empDB with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/C:/Users/Liandri/workspace%20-%20Copy/EmployeeApp/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\Users\Liandri\workspace - Copy\EmployeeApp
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.student.AddPaperController">
+   <top>
+      <Label prefHeight="31.0" prefWidth="111.0" text="Add Paper" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="91.0" text="Add Paper" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.30267558528428096" layoutX="137.0" layoutY="61.0" prefHeight="344.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <GridPane layoutX="29.0" layoutY="81.0" prefHeight="342.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Name" />
+                              <Label text="Semester" GridPane.rowIndex="1" />
+                              <Label text="Percent" GridPane.rowIndex="2" />
+                              <Label text="Weight" GridPane.rowIndex="3" />
+                              <Label text="Projected" GridPane.rowIndex="4" />
+                              <Label text="Code" GridPane.columnIndex="2" />
+                              <Label text="Level" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="Value" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text="Result" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField fx:id="paperTxt" GridPane.columnIndex="1" />
+                              <TextField fx:id="codeTxt" GridPane.columnIndex="3" />
+                              <TextField fx:id="semesterTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="levelTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="percentTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="valueTxt" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="weightTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="resultTxt" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <TextField fx:id="projectedTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <GridPane layoutX="59.0" layoutY="58.0" prefHeight="342.0" prefWidth="317.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Value" GridPane.columnIndex="1" />
+                              <Label text="Weight" GridPane.columnIndex="2" />
+                              <Label text="Result" GridPane.columnIndex="3" />
+                              <Label text="Assign  1" GridPane.rowIndex="1" />
+                              <Label text="Assign  2" GridPane.rowIndex="2" />
+                              <Label text="Assign  3" GridPane.rowIndex="3" />
+                              <Label text="Assign  4" GridPane.rowIndex="4" />
+                              <Label text="Mid Exam" GridPane.rowIndex="5" />
+                              <Label text="Final Exam" GridPane.rowIndex="6" />
+                              <Label text="Totals" GridPane.rowIndex="7" />
+                              <TextField fx:id="a1vTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="a1wTxt" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="a1rTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="a2vTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="a2wTxt" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="a2rTxt" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="a3vTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="a3wTxt" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField fx:id="a3rTxt" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <TextField fx:id="a4vTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="midvTxt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="fvTxt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="a4wTxt" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextField fx:id="midwTxt" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField fx:id="fwTxt" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <TextField fx:id="a4rTxt" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <TextField fx:id="midrTxt" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <TextField fx:id="frTxt" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <Label fx:id="a7vLbl" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="a7wLbl" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label fx:id="a7rLbl" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

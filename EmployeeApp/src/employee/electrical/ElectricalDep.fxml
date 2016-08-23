@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.electrical.ElectricalController">
+   <top>
+      <Label text="Electrical Department" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.6153846153846154" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableEmp" layoutY="37.0" onMouseClicked="#setEmpFeilds" prefHeight="371.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableEmpID" prefWidth="50.0" text="ID" />
+                      <TableColumn fx:id="tableEmpName" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="teAddress" prefWidth="75.0" text="Address" />
+                        <TableColumn fx:id="teCity" prefWidth="75.0" text="City" />
+                        <TableColumn fx:id="tePhone" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="teCell" prefWidth="75.0" text="Cell" />
+                        <TableColumn fx:id="teEmail" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="teDOB" prefWidth="75.0" text="Birth Date" />
+                        <TableColumn fx:id="teAge" prefWidth="30.0" text="Age" />
+                        <TableColumn fx:id="teMarital" prefWidth="75.0" text="Marital" />
+                        <TableColumn fx:id="teGender" prefWidth="75.0" text="Gender" />
+                        <TableColumn fx:id="teDep" prefWidth="75.0" text="Department" />
+                    </columns>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane layoutX="95.0" layoutY="75.0" prefHeight="371.0" prefWidth="417.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="General">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane fx:id="gridPaneElec" layoutX="89.0" layoutY="126.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="77.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="156.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="85.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="171.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Name">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="addressLbl" text="Address" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="emailLbl" text="Email" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="dobLbl" text="D_O_B" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="MaritalLbl" text="Marital" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="depLbl" text="Department" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <TextField fx:id="nameTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                                          <TextField fx:id="cellTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" />
+                                          <TextField fx:id="addressTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="phoneTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <TextField fx:id="emailTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="cityTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                          <TextField fx:id="dobTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="ageTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <TextField fx:id="maritalTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="genderTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <TextField fx:id="depTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="numCertsTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                          <Label fx:id="celLbl" text="Cell Phone" GridPane.columnIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="phoneLbl" text="Phone" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="cityLbl" text="City" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="ageLbl" text="Age" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="genderLbl" text="Gender" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="numCertsLbl" text="# of Certs" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></Label>
+                                          <Label fx:id="nextLbl" text="Next " GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="previousLbl" text="Previous" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Button fx:id="empNextBtn" mnemonicParsing="false" onAction="#employeeNext" text="Next Emp  -&gt;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="EmpPreviousBtn" mnemonicParsing="false" onAction="#employeePrevious" text="&lt;- Previous Emp" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Label prefHeight="17.0" prefWidth="142.0" text="Commit Changes to DB" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Button fx:id="commitToDB" mnemonicParsing="false" onAction="#commit" prefHeight="25.0" prefWidth="149.0" text="Commit Changes" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="10.0" />
+                                       </padding>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Certificates">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="89.0" layoutY="98.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="77.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="134.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="58.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="empNumLbl" text="Emp Number">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certNumLbl" text="Cert #" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certProLbl" text="Cert Provider" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certStartLbl" text="Start Date" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <TextField fx:id="empNumTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                                          <TextField fx:id="certNumTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="certProvTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="certStartTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label fx:id="empNameLbl" text="Name" GridPane.columnIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certTypeLbl" text="Cert Type" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certDescLbl" text="Cert Description" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certExpLbl" text="Expires" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <TextField fx:id="empNameTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" />
+                                          <TextField fx:id="certTypeTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <TextField fx:id="certDescTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                          <TextField fx:id="certExpTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <TextField fx:id="rebookTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="certIDTxt" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <Label fx:id="rebookLbl" text="Rebook Date" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="certIDLbll" text="CertID" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Button fx:id="certNextBtn" mnemonicParsing="false" onAction="#cetificateNext" text="Next Cert -&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="certPreviousBtn" mnemonicParsing="false" onAction="#cetificatePrevious" text="&lt;- Previous" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Label text="Next" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                          <Label text="Previous" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin></Label>
+                                       </children>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
